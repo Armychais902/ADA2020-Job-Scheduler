@@ -2,25 +2,30 @@
 Algorithm Design and Analysis, Fall 2020, Project - Job Scheduler
 
 ## Introduction
-The NTU CSIE NASA Workstation Team is thinking of developing an algorithm to schedule tasks on the GPU servers.
+This is the final project of ADA lecture in NTU CSIE:
 
+>The NTU CSIE NASA Workstation Team is thinking of developing an algorithm to schedule tasks on the GPU servers.
 (Disclaimer: The scenario is purely hypothetical and does not reflect real-world decisions.)
 
-For simplicity, we assume that students submit jobs to run before a given point of time (say, every midnight).
-
+>For simplicity, we assume that students submit jobs to run before a given point of time (say, every midnight).
 In other words, the scheduling can be done offline.
 
-We also assume that the students can predict to a certain extent how long their jobs will run.
-
+>We also assume that the students can predict to a certain extent how long their jobs will run.
 (For example, we can kill tasks that are over the time limit, while using the “bubbles” caused by tasks finishing before expectation for non-scheduled jobs.)
 
-The goal is to minimize
+>The goal is to minimize:
+>- The *makespan*, i.e., the total time it takes to finish the jobs
+>- The *weighted total flow time*, i.e., the weighted sum of the finishing times
 
-- The *makespan*, i.e., the total time it takes to finish the jobs
+>--<cite>[ Final Challenge][1]</cite>
 
-- The *weighted total flow time*, i.e., the weighted sum of the finishing times
+[1]: https://hackmd.io/6zxbedYCSLe8M8hW1Su0ww
 
 ### Definitions
+**Definition of terms is from <cite>[ Final Challenge][1]</cite>**
+
+[1]: https://hackmd.io/6zxbedYCSLe8M8hW1Su0ww**
+
 #### *Slice*
 Can be thought of units of computational power (e.g., VRAM.).
 
